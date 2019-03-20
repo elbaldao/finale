@@ -7,10 +7,10 @@
 <title>Proyecto ASR Lorenzo Baldoni new </title>
 </head>
 <body>
-<h1>FORZA JUVE SEMPRE!!</h1>
+<h1>FORZA JUVE SEMPRE e Per SEMPRE!!</h1>
 <h1>Ejemplo de Proyecto de ASR, con Cloudant ahora con DevOps</h1>
 <hr />
-<p>Opcionesde la clase de ASR:</p>
+<p>Opciones de la clase de ASR:</p>
 <ul>
 <li><a href="listar">Listar</a></li>
 <li><a href="insertar?palabra=hola">Insertar</a></li>
