@@ -36,6 +36,12 @@
   </dependencyManagement>
 
   <dependencies>
+  
+  <dependency>
+	<groupId>com.ibm.watson.developer_cloud</groupId>
+		<artifactId>language-translator</artifactId>
+		<version>5.0.1</version>
+	</dependency>
 
     <dependency>
       <groupId>com.cloudant</groupId>
