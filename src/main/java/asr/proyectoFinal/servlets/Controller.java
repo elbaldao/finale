@@ -107,6 +107,7 @@ public class Controller extends HttpServlet {
 
 				// clean up
 				byteArrayOutputStream.close();
+				
 				fileOutputStream.close();	
 				
 				out.println("LISTO");
