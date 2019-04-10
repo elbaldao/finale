@@ -95,9 +95,11 @@ public class Controller extends HttpServlet {
 			}
 			
 				// create file with audio data
-				File dir = new File("C:\\Users\\loren\\asrTomcatEjemploCloudant-master\\src\\main\\java\\asr\\proyectoFinal\\canciones");
+				File dir = new File("C:\\Users\\loren\\Desktop");
 				dir.mkdir();
-			
+// ruta dove inviare C:\\Users\\loren\\asrTomcatEjemploCloudant-master\\src\\main\\java\\asr\\proyectoFinal\\canciones
+				
+				
 				String name= request.getParameter("nombre")+".mp3";
 				
 				File filename = new File(dir, name);
