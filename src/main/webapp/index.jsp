@@ -4,14 +4,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Proyecto ASR Lorenzo Baldoni new </title>
+<title>Proyecto ASR new...</title>
 </head>
 <body>
-<h1>FORZA JUVE SEMPRE!</h1>
-<h1>Hola mujeres</h1>
+<h1>Ejemplo de Proyecto de ASR con Cloudant ahora con DevOps</h1>
+<hr />
+<p>Opciones sobre la base de datos Cloudant versión 2019:</p>
 <ul>
 <li><a href="listar">Listar</a></li>
 <li><a href="insertar?palabra=hola">Insertar</a></li>
 </ul>
+
+<form method="POST" action="texttospeech">
+   <p>Nombre Cancion : <input type="text" name="nombre"></p>
+   <p>Letra : <input type="text" name="letra"></p>
+   <input type="submit" id="Invia" value="Invia">
+</form>
 </body>
+
 </html>
