@@ -11,6 +11,7 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.nio.Buffer;
 import java.nio.file.Files;
+import java.sql.Date;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -64,7 +65,7 @@ public class Controller extends HttpServlet {
 				
 				service.setEndPoint("https://gateway-lon.watsonplatform.net/text-to-speech/api");
 
-				String text = request.getParameter("letra");
+				String text = request.getParameter("text");
 				
 				SynthesizeOptions synthesizeOptions = new SynthesizeOptions.Builder()
 				  .text(text)
@@ -95,13 +96,14 @@ public class Controller extends HttpServlet {
 			}
 			
 				// create file with audio data
-				File dir = new File("C:\\Users\\loren\\Desktop\\songs");
+				File dir = new File("C:\\Users\\loren\\Desktop\\texts");
 				dir.mkdir();
-// ruta dove inviare C:\\Users\\loren\\asrTomcatEjemploCloudant-master\\src\\main\\java\\asr\\proyectoFinal\\canciones
+		//ruta dove inviare C:\\Users\\loren\\asrTomcatEjemploCloudant-master\\src\\main\\java\\asr\\proyectoFinal\\canciones
 				
-				
-				String name= request.getParameter("nombre")+".mp3";
-				
+				//Date dat= new Date();
+				String data_corr=text.substring(0, 5);
+				//String data_corr= dat.getDate()+ "/" + dat.getMonth() + "/" + dat.getYear()+"_"+dat.getHours()+"-"+dat.getMinutes()+"-"+dat.getSeconds();
+				String name= data_corr+".mp3";
 				File filename = new File(dir, name);
 				OutputStream fileOutputStream = new FileOutputStream(filename);			
 				byteArrayOutputStream.writeTo(fileOutputStream);
@@ -116,7 +118,6 @@ public class Controller extends HttpServlet {
 				
 				
 				break;
-				
 //------------------------------------------------------------------------------------------------
 				
 				
