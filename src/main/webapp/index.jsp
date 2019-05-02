@@ -38,7 +38,7 @@
 	<!--  Jumbotron spiegazione-->
 	<div id="jumbo" class="jumbotron">
 	  <h1 class="display-4">Buongiorno visitatore!</h1>
-	  <p class="lead">Benvenuto nel nostra webpage. Qui potrai eseguire una serie di azioni su un testo, tra cui la traduzione, analizzarlo grazie al test dei tratti della personalità dei Big 5, ottenere un file audio e molto altro.</p>
+	  <p class="lead">Benvenuto nel nostra webpage. Qui potrai eseguire una serie di azioni su un testo, tra cui la traduzione, analizzarlo grazie al test dei tratti della personalitï¿½ dei Big 5, ottenere un file audio e molto altro.</p>
 	  <hr class="my-4">
 	  <p>Ti auguriamo una buona permanenza nel nostro sito, effettua il login qua sotto</p>
 	</div>
@@ -46,7 +46,7 @@
 	<!--  Login -->
 	<div id="signin">
 		<h3>Effettua il login: </h3>
-		<form action="log" method="POST">
+		<form action="texttospeech" method="POST">
 			<div class="form-group">
 				<label>Inserire username: </label><input class="form-control" type="text" name="username">
 				<label id="lbl2">Inserire password: </label><input class="form-control" type="password" name="password">

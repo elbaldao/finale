@@ -19,6 +19,9 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 
 import com.ibm.watson.developer_cloud.service.security.IamOptions;
 import com.ibm.watson.developer_cloud.text_to_speech.v1.TextToSpeech;
@@ -59,13 +62,13 @@ public class Controller extends HttpServlet {
 				
 				TextToSpeech service = new TextToSpeech();
 				IamOptions options = new IamOptions.Builder()
-				  .apiKey("Bc2tMUhywg6IcCgctVY6b_hSTQmMhYBTh8djshN6-VEG")
+				  .apiKey("Lbe4BBfVpfut4CaPy-zGLIhlW1LPZwV1wwed4fn17qi-")
 				  .build();
 				service.setIamCredentials(options);
 				
 				service.setEndPoint("https://gateway-lon.watsonplatform.net/text-to-speech/api");
 
-				String text = request.getParameter("text");
+				String text = "Hello mama";
 				
 				SynthesizeOptions synthesizeOptions = new SynthesizeOptions.Builder()
 				  .text(text)
@@ -103,10 +106,23 @@ public class Controller extends HttpServlet {
 				//Date dat= new Date();
 				String data_corr=text.substring(0, 5);
 				//String data_corr= dat.getDate()+ "/" + dat.getMonth() + "/" + dat.getYear()+"_"+dat.getHours()+"-"+dat.getMinutes()+"-"+dat.getSeconds();
-				String name= data_corr+".mp3";
+				String name= data_corr+".wav";
 				File filename = new File(dir, name);
 				OutputStream fileOutputStream = new FileOutputStream(filename);			
 				byteArrayOutputStream.writeTo(fileOutputStream);
+				out.println("SCARICATO");
+				
+		/*		try {
+			        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("C:\\Users\\loren\\Desktop\\texts"+name).getAbsoluteFile());
+			        Clip clip = AudioSystem.getClip();
+			        clip.open(audioInputStream);
+			        clip.start();
+			        out.println("Sto leggendo");
+			    } catch(Exception ex) {
+			        out.println("Error with playing sound.");
+			        ex.printStackTrace();
+			    }
+		*/		
 				
 
 				// clean up
@@ -114,7 +130,7 @@ public class Controller extends HttpServlet {
 				
 				fileOutputStream.close();	
 				
-				out.println("LISTO");
+				//out.println("LISTO");
 				
 				
 				break;
